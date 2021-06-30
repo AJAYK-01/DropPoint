@@ -1,7 +1,7 @@
 {
   "name": "droppoint",
   "productName": "DropPoint",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Drag-and-drop assist",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,14 @@
     "appId": "com.gamegods3.droppoint",
     "productName": "DropPoint",
     "mac": {
-      "category": "public.app-category.utilities"
+      "category": "public.app-category.utilities",
+      "target": {
+        "target": "dmg",
+        "arch": [
+          "arm64",
+          "x64"
+        ]
+      }
     },
     "dmg": {
       "icon": false
