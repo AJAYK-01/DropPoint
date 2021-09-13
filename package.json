@@ -6,8 +6,8 @@
   "main": "./src/App.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder",
-    "release": "electron-builder --publish always"
+    "build": "electron-builder --arm64 --x64",
+    "release": "electron-builder --publish always --arm64 --x64"
   },
   "keywords": [],
   "author": {
