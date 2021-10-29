@@ -19,20 +19,13 @@
     "appId": "com.gamegods3.droppoint",
     "productName": "DropPoint",
     "mac": {
-      "target": [
-        {
-          "target": "dmg",
-          "arch": [
-            "x64",
-            "arm64"
-          ]
-        }
-      ],
-      "type": "distribution",
+      "target": {
+        "target": "default",
+        "arch": [
+          "universal"
+        ]
+      },
       "category": "public.app-category.utilities"
-    },
-    "dmg": {
-      "icon": false
     },
     "linux": {
       "target": [
