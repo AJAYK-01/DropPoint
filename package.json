@@ -18,6 +18,9 @@
   "build": {
     "appId": "com.gamegods3.droppoint",
     "productName": "DropPoint",
+    "dmg": {
+      "icon": false
+    },
     "mac": {
       "target": [
         {
