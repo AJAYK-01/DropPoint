@@ -1,0 +1,17 @@
+{
+    "name": "droppoint",
+    "productName": "DropPoint",
+    "version": "1.1.4",
+    "description": "Drag-and-drop assist",
+    "main": "./src/App.js",
+    "author": {
+        "name": "Sudev Suresh Sreedevi",
+        "email": "sudevssuresh@gmail.com"
+    },
+    "scripts": {
+        "electron-rebuild": "node -r ts-node/register ../../.erb/scripts/electron-rebuild.js",
+        "link-modules": "node -r ts-node/register ../../.erb/scripts/link-modules.js",
+        "postinstall": "npm run electron-rebuild && npm run link-modules"
+    },
+    "license": "MIT"
+}
