@@ -52,12 +52,12 @@ class Instance {
   createNewWindow() {
     this.config.get("openAtCursorPosition")
       ? () => {
-          const cursorPosition = this.getCursorPos();
-          this.windowConfig.x = cursorPosition.x;
-          this.windowConfig.y = cursorPosition.y;
-        }
+        const cursorPosition = this.getCursorPos();
+        this.windowConfig.x = cursorPosition.x;
+        this.windowConfig.y = cursorPosition.y;
+      }
       : (this.windowConfig.x =
-          screen.getPrimaryDisplay().workArea.width / 2 - 100);
+        screen.getPrimaryDisplay().workArea.width / 2 - 100);
 
     this.instance = new BrowserWindow(this.windowConfig);
 
@@ -65,7 +65,7 @@ class Instance {
 
     this.instance.loadURL(`file://${html_path}?id=${this.id}`);
 
-    this.instance.setVisibleOnAllWorkspaces(true);
+    this.instance.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
 
     if (this.devFlag) this.instance.webContents.openDevTools();
 
